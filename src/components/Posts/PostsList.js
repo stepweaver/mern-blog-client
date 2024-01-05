@@ -135,8 +135,8 @@ export default function PostsList() {
                       className='flex flex-wrap bg-gray-900 -mx-3 lg:mb-6'
                     >
                       <div className='mb-10  w-full lg:w-1/4'>
-                        <Link>
-                          {/* Post image */}
+                        {/* Post image */}
+                        <Link to={`/posts/${post?._id}`}>
                           <img
                             className='w-full h-full object-cover rounded'
                             src={post?.image}
@@ -186,9 +186,11 @@ export default function PostsList() {
                         </div>
                       </div>
                       <div className='w-full lg:w-3/4 px-3'>
-                        <Link className='hover:underline'>
+                        <Link
+                          to={`/posts/${post?._id}`}
+                          className='hover:underline'
+                        >
                           <h3 className='mb-1 text-2xl text-green-400 font-bold font-heading'>
-                            {/* {capitalizeWord(post?.title)} */}
                             {post?.title}
                           </h3>
                         </Link>
@@ -198,7 +200,7 @@ export default function PostsList() {
                           to={`/posts/${post?._id}`}
                           className='text-indigo-500 hover:underline'
                         >
-                          Read More..
+                          Read More...
                         </Link>
                         {/* User Avatar */}
                         <div className='mt-6 flex items-center'>
