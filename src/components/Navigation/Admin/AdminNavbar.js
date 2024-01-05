@@ -111,7 +111,7 @@ const AdminNavbar = ({ isLogin }) => {
                       to={item.href}
                       className={classNames(
                         item.current
-                          ? 'bg-orange-500 text-white'
+                          ? 'bg-orange-600 text-white'
                           : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                         'px-3 py-2 rounded-md text-sm font-medium'
                       )}
@@ -128,7 +128,7 @@ const AdminNavbar = ({ isLogin }) => {
                   <Link
                     to='/create-post'
                     type='button'
-                    className='relative mr-4 inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-orange-500 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500'
+                    className='relative mr-4 inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500'
                   >
                     <PlusIcon
                       className='-ml-1 mr-2 h-5 w-5'

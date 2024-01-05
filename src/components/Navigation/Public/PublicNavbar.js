@@ -51,7 +51,7 @@ const PublicNavbar = () => {
                       to={item.href}
                       className={classNames(
                         item.current
-                          ? 'bg-orange-500 text-white'
+                          ? 'bg-orange-600 text-white'
                           : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                         'px-3 py-2 rounded-md text-sm font-medium'
                       )}
@@ -75,20 +75,6 @@ const PublicNavbar = () => {
                     />
                     <span>Login</span>
                   </Link>
-                </div>
-                <div className='hidden md:ml-4 md:flex-shrink-0 md:flex md:items-center'>
-                  {userAuth && (
-                    <Link
-                      to='/create-post'
-                      className='relative inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-pink-500 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500'
-                    >
-                      <PlusIcon
-                        className='-ml-1 mr-2 h-5 w-5'
-                        aria-hidden='true'
-                      />
-                      <span>New Post</span>
-                    </Link>
-                  )}
                 </div>
               </div>
             </div>
