@@ -40,7 +40,7 @@ const HomePage = () => {
               </a>
             ) : (
               <a
-              className='inline-block px-12 py-5 text-lg text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200 hover:origin-top transform hover:-translate-y-1 hover:scale-110'
+              className='inline-block px-12 py-5 text-lg text-white font-bold bg-blue-600 hover:bg-blue-700 rounded-full transition duration-200 hover:origin-top transform hover:-translate-y-1 hover:scale-110'
                 href='/register'
               >
                 Create an account
