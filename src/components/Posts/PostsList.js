@@ -227,14 +227,9 @@ export default function PostsList() {
                               <time>
                                 <DateFormatter date={post?.createdAt} />
                               </time>
-                              <span aria-hidden='true'>&middot;</span>
                             </div>
                           </div>
                         </div>
-                        {/* <p class='text-gray-500'>
-                          Quisque id sagittis turpis. Nulla sollicitudin rutrum
-                          eros eu dictum...
-                        </p> */}
                       </div>
                     </div>
                   ))
