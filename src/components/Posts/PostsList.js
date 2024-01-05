@@ -131,7 +131,7 @@ export default function PostsList() {
                 ) : (
                   postList?.map((post) => (
                     <div
-                      key={post.id}
+                      key={post._id}
                       className='flex flex-wrap bg-gray-900 -mx-3 lg:mb-6'
                     >
                       <div className='mb-10  w-full lg:w-1/4'>
