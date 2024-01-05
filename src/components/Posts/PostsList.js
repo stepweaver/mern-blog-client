@@ -78,7 +78,7 @@ export default function PostsList() {
                 {/* View All */}
                 <button
                   onClick={() => dispatch(fetchPostsAction(''))}
-                  className='inline-block py-2 px-6 rounded-l-xl rounded-t-xl bg-green-600 hover:bg-green-700 text-gray-50 font-bold leading-loose transition duration-200'
+                  className='inline-block py-2 px-6 rounded-l-xl rounded-t-xl bg-orange-600 hover:bg-orange-700 text-gray-50 font-bold leading-loose transition duration-200'
                 >
                   View All Posts
                 </button>
@@ -190,7 +190,7 @@ export default function PostsList() {
                           to={`/posts/${post?._id}`}
                           className='hover:underline'
                         >
-                          <h3 className='mb-1 text-2xl text-green-400 font-bold font-heading'>
+                          <h3 className='mb-1 text-2xl text-orange-600 hover:text-orange-500 font-bold font-heading'>
                             {post?.title}
                           </h3>
                         </Link>
@@ -198,7 +198,7 @@ export default function PostsList() {
                         {/* Read more */}
                         <Link
                           to={`/posts/${post?._id}`}
-                          className='text-indigo-500 hover:underline'
+                          className='text-blue-600 hover:underline'
                         >
                           Read More...
                         </Link>
@@ -217,13 +217,13 @@ export default function PostsList() {
                             <p className='text-sm font-medium text-gray-900'>
                               <Link
                                 to={`/profile/${post?.author?._id}`}
-                                className='text-yellow-400 hover:underline '
+                                className='text-yellow-500 hover:underline '
                               >
                                 {post?.author?.firstName}{' '}
                                 {post?.author?.lastName}
                               </Link>
                             </p>
-                            <div className='flex space-x-1 text-sm text-green-500'>
+                            <div className='flex space-x-1 text-sm text-orange-500'>
                               <time>
                                 <DateFormatter date={post?.createdAt} />
                               </time>
@@ -239,7 +239,7 @@ export default function PostsList() {
           </div>
         </div>
         <div className='bg-gray-900'>
-          <div className='skew bg-green-500 skew-bottom mr-for-radius'>
+          <div className='skew bg-orange-600 skew-bottom mr-for-radius'>
             <svg
               className='h-8 md:h-12 lg:h-10 w-full text-gray-900'
               viewBox='0 0 10 10'
