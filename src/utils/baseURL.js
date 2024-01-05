@@ -1,0 +1,1 @@
+export const baseUrl = 'https://mern-blog-api-856420b51bb5.herokuapp.com';
