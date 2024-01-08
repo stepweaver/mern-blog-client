@@ -13,6 +13,8 @@ import { PencilAltIcon, TrashIcon } from '@heroicons/react/solid';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate, useParams } from 'react-router-dom';
+import Linkify from 'react-linkify';
+import DOMPurify from 'dompurify';
 
 import {
   deletePostAction,
@@ -36,6 +38,8 @@ const PostDetails = () => {
   // Select comment from store
   const comment = useSelector((state) => state?.comment);
   const { commentCreated, commentDeleted } = comment;
+
+  const sanitizedDescription = DOMPurify.sanitize(postDetails?.description);
 
   useEffect(() => {
     dispatch(fetchPostDetailsAction(id));
@@ -102,8 +106,26 @@ const PostDetails = () => {
               </div>
               {/* Post description */}
               <div className='max-w-xl mx-auto'>
-                <div className='mb-6 text-left  text-xl text-gray-200'>
-                  {postDetails?.description}
+                <div
+                  className='mb-6 text-left  text-xl text-gray-200'
+                  style={{ whiteSpace: 'pre-wrap' }}
+                >
+                  <Linkify
+                    componentDecorator={(decoratedHref, decoratedText, key) => (
+                      <a
+                        target='blank'
+                        href={decoratedHref}
+                        key={key}
+                        className='text-blue-600 hover:text-blue-700'
+                      >
+                        {decoratedText}
+                      </a>
+                    )}
+                  >
+                    <span className='text-gray-200'>
+                      {sanitizedDescription}
+                    </span>
+                  </Linkify>
                   {/* Show delete and update btn if created by user */}
                   {isCreatedBy ? (
                     <p className='flex'>

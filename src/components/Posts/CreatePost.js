@@ -167,7 +167,7 @@ export default function CreatePost() {
                   onBlur={formik.handleBlur}
                   rows='5'
                   cols='10'
-                  className='rounded-lg appearance-none block w-full py-3 px-3 text-base text-center leading-tight text-gray-600 bg-transparent focus:bg-transparent  border border-gray-200 focus:border-gray-500  focus:outline-none'
+                  className='rounded-lg appearance-none block w-full py-3 px-3 text-base text-gray-600 bg-transparent focus:bg-transparent border focus:border-gray-500 focus:outline-none whitespace-pre-line'
                   type='text'
                 ></textarea>
                 {/* Err msg */}
